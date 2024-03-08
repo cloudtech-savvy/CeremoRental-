@@ -1,0 +1,55 @@
+/* SubscriptionNewsLetter.css */
+
+/* Container styles */
+.container {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Heading styles */
+h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+/* Input styles */
+input[type="email"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+/* Button styles */
+button {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+}
+
+/* Item styles */
+.item {
+    margin-bottom: 20px;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+    .container {
+        max-width: 100%;
+        padding: 10px;
+    }
+    
+    h2 {
+        font-size: 20px;
+    }
+    
+    input[type="email"] {
+        padding: 8px;
+    }
+    
+    button {
+        padding: 8px 16px;
+    }
+}

@@ -1,0 +1,42 @@
+
+/* Styles for small devices */
+
+@media only screen and (max-width: 767px) {
+    /* Add your CSS styles for small devices here */
+    body {
+        background-color: lightblue;
+    }
+
+    .container {
+        width: 80%;
+        margin: 0 auto;
+    }
+
+    .title {
+        font-size: 32px;
+        color: #000;
+    }
+
+    .content {
+        margin-top: 20px;
+        font-size: 18px;
+        color: #888;
+    }
+}
+/* Styles for all devices */
+/* Add your CSS styles for all devices here */
+
+body {
+    font-family: Arial, sans-serif;
+}
+
+.container {
+    padding: 20px;
+
+.title {
+    font-weight: bold;
+}
+
+.content {
+    line-height: 1.5;
+}}

@@ -62,6 +62,11 @@ class Rental(models.Model):
     rental_date = models.DateTimeField(auto_now_add=True)
     return_date = models.DateTimeField(null=True, blank=True)
 
+
+
+
+
+
     """
     handling file upload
     """
