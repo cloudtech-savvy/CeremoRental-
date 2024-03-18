@@ -16,7 +16,6 @@ function Navbar() {
   const openNav = () => {
     setNav(!nav);
   };
-
   const handleChatBtnClick = () => {
     if (!isButtonDisabled) {
       toast.info("Experiencing high traffic, Please wait a moment.", {
@@ -26,7 +25,6 @@ function Navbar() {
       });
     }
   };
-
   return (
     <div className="navbar-section">
       <h1 className="navbar-title">
@@ -34,7 +32,6 @@ function Navbar() {
           Ceremo<span className="navbar-sign">+</span>
         </Link>
       </h1>
-
       {/* Desktop */}
       <ul className="navbar-items">
         <li>
@@ -53,12 +50,12 @@ function Navbar() {
           </a>
         </li>
         <li>
-          <a href="contactform" className="navbar-links">
+          <a href="contact" className="navbar-links">
             Contact Us 
           </a>
         </li>
         <li>
-          <a href="sign-in" className="navbar-links">
+          <a href="login" className="navbar-links">
             Sign in
           </a>
         </li>
@@ -86,7 +83,7 @@ function Navbar() {
             </Link>
           </li>
           <li>
-            <a onClick={openNav} href="#services">
+            <a onClick={openNav} href="services">
               Services
             </a>
           </li>
@@ -95,7 +92,6 @@ function Navbar() {
               About Us
             </a>
           </li>
-      
           <li>
       <a onClick={openNav} href="contactform">
         Contact Us

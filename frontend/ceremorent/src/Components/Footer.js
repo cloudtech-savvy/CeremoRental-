@@ -88,7 +88,7 @@ function Footer() {
       </div>
 
       <div className="ft-copyright">
-        <p>© 2024 Cremony Rental Platform. All rights reserved.</p>
+        <p>© 2024 Ceremony Rental Platform. All rights reserved.</p>
 
         <ul className="ft-social-links">
           <li>

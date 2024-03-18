@@ -1,0 +1,14 @@
+.searchform{
+    position: relative;
+    display: flex;
+    /* justify-content: center; */
+    /* align-items: center; */
+    /* margin-top: 20px; */
+    /* margin-bottom: 20px; */
+    margin-right:40px;
+    background-color: aquamarine;
+    width:50%;
+    height: 50%;
+
+}
+

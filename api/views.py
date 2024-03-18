@@ -143,6 +143,25 @@
 #         order.delete()
 #         return Response(status=status.HTTP_204_NO_CONTENT)
 
+from django.views.decorators.cache import cache_page
+
+@cache_page(60 * 15)  # Cache this view for 15 minutes
+def my_view(request):
+    ...
+
+from django.core.mail import send_mail
+
+def my_view(request):
+    ...
+    send_mail(
+        'Hello',
+        'Body goes here',
+        'from@example.com',
+        ['to@example.com'],
+        fail_silently=False,
+    )
+    ...
+    
 from django.contrib.auth.forms import UserCreationForm
 from django.contrib.auth.models import User
 from django.http import Http404
@@ -189,7 +208,7 @@ class IsAdminUser(permissions.BasePermission):
     """ 
      views for CURD operations on Item model
     """
-    from rest_framework import status
+from rest_framework import status
 from rest_framework.response import Response
 from rest_framework.views import APIView
 from .models import Item
@@ -239,7 +258,7 @@ class ItemDetail(APIView):
     """
     views for handle file upload and download in single view
     """
-    from django.http import FileResponse
+from django.http import FileResponse
 from rest_framework.views import APIView
 from rest_framework.parsers import MultiPartParser
 from rest_framework.response import Response
@@ -265,3 +284,13 @@ class DocumentView(APIView):
             return Response(serializer.data, status=status.HTTP_201_CREATED)
         return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
     
+
+from rest_framework import viewsets
+from .models import User
+from .serializers import UserSerializer
+from rest_framework.permissions import IsAuthenticated
+
+class UserViewSet(viewsets.ModelViewSet):
+    queryset = User.objects.all()
+    serializer_class = UserSerializer
+    permission_classes = [IsAuthenticated]
